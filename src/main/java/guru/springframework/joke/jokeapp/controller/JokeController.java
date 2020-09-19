@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+@RequestMapping("/jokes")
 @Controller
 public class JokeController {
 
@@ -17,7 +18,6 @@ public class JokeController {
         this.jokeService = jokeService;
     }
 
-    // @RequestMapping(method=RequestMethod.POST, value="/topics")
     @RequestMapping({"/",""})
     public String showJoke(Model model){
         // THis is MVC model interacts with UI View.
